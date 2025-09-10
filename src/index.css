@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Profit Weaver Pro - Business Management System Design System */
+
+@layer base {
+  :root {
+    /* Blue and white business color palette */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Professional blue primary */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 217 91% 70%;
+
+    /* Professional secondary - light blue */
+    --secondary: 120 100% 70%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 40% 98%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Business accent - complementary blue */
+    --accent: 30 100% 70%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Success - modern blue */
+    --success: 217 91% 55%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning - Kenyan gold */
+    --warning: 45 93% 58%;
+    --warning-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom business gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(217 91% 65%));
+    --gradient-dashboard: linear-gradient(180deg, hsl(var(--background)), hsl(210 40% 98%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+    --gradient-elegant: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--secondary) / 0.1));
+    
+  /* Business shadows and glows */
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-dashboard: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+  --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.1), 0 0 20px hsl(var(--primary) / 0.1);
+  --shadow-glow-strong: 0 0 0 2px hsl(var(--primary) / 0.2), 0 0 30px hsl(var(--primary) / 0.2);
+  --shadow-glow-purple: 0 0 0 1px hsl(300 76% 72% / 0.3), 0 0 25px hsl(300 76% 72% / 0.2);
+  --shadow-glow-green: 0 0 0 1px hsl(120 100% 70% / 0.3), 0 0 25px hsl(120 100% 70% / 0.2);
+  --shadow-glow-orange: 0 0 0 1px hsl(30 100% 70% / 0.3), 0 0 25px hsl(30 100% 70% / 0.2);
+
+  /* Animation variables */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Rainbow gradient colors */
+  --rainbow-1: 300 76% 72%; /* Purple */
+  --rainbow-2: 280 100% 70%; /* Violet */
+  --rainbow-3: 240 100% 70%; /* Blue */
+  --rainbow-4: 200 100% 70%; /* Light Blue */
+  --rainbow-5: 160 100% 70%; /* Cyan */
+  --rainbow-6: 120 100% 70%; /* Green */
+  --rainbow-7: 60 100% 70%; /* Yellow */
+  --rainbow-8: 30 100% 70%; /* Orange */
+  --rainbow-9: 0 100% 70%; /* Red */
+
+    /* Sidebar variables */
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - professional night theme */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 217.2 32.6% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217.2 32.6% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Dark mode primary - brighter blue */
+    --primary: 217 91% 65%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-glow: 217 91% 75%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    /* Dark mode accent - softer blue */
+    --accent: 210 91% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Dark mode success */
+    --success: 217 91% 60%;
+    --success-foreground: 222.2 84% 4.9%;
+
+    /* Dark mode warning */
+    --warning: 45 93% 58%;
+    --warning-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 217 91% 65%;
+
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(217 91% 70%));
+    --gradient-dashboard: linear-gradient(180deg, hsl(var(--background)), hsl(217.2 32.6% 8%));
+
+    /* Dark mode shadows and glows */
+    --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+    --shadow-dashboard: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+    --shadow-glow: 0 0 0 1px hsl(var(--primary) / 0.2), 0 0 20px hsl(var(--primary) / 0.2);
+    --shadow-glow-strong: 0 0 0 2px hsl(var(--primary) / 0.3), 0 0 35px hsl(var(--primary) / 0.3);
+    --shadow-glow-purple: 0 0 0 1px hsl(300 76% 72% / 0.4), 0 0 30px hsl(300 76% 72% / 0.3);
+    --shadow-glow-green: 0 0 0 1px hsl(120 100% 70% / 0.4), 0 0 30px hsl(120 100% 70% / 0.3);
+    --shadow-glow-orange: 0 0 0 1px hsl(30 100% 70% / 0.4), 0 0 30px hsl(30 100% 70% / 0.3);
+
+    --sidebar-background: 217.2 32.6% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 222.2 84% 4.9%;
+    --sidebar-accent: 217.2 32.6% 15%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 217.2 32.6% 15%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-dashboard);
+  }
+}
+
+@layer components {
+  /* Business card styles with glows */
+  .card-dashboard {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-card)] backdrop-blur-sm;
+  }
+
+  .card-metric {
+    @apply bg-gradient-to-br from-card to-card/90 border border-border/50 rounded-lg p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-dashboard)] transition-all duration-300;
+  }
+
+  .card-glow {
+    @apply bg-card border border-border/50 rounded-lg shadow-[var(--shadow-glow)] hover:shadow-[var(--shadow-glow-strong)] transition-all duration-300 backdrop-blur-sm;
+  }
+
+  .card-glow-purple {
+    @apply bg-gradient-to-br from-purple-50 to-card border border-purple-200/50 rounded-lg shadow-[var(--shadow-glow-purple)] transition-all duration-300;
+  }
+
+  .card-glow-green {
+    @apply bg-gradient-to-br from-green-50 to-card border border-green-200/50 rounded-lg shadow-[var(--shadow-glow-green)] transition-all duration-300;
+  }
+
+  .card-glow-orange {
+    @apply bg-gradient-to-br from-orange-50 to-card border border-orange-200/50 rounded-lg shadow-[var(--shadow-glow-orange)] transition-all duration-300;
+  }
+
+  /* Dark mode glow cards */
+  .dark .card-glow-purple {
+    @apply from-purple-900/20 to-card border-purple-500/30;
+  }
+
+  .dark .card-glow-green {
+    @apply from-green-900/20 to-card border-green-500/30;
+  }
+
+  .dark .card-glow-orange {
+    @apply from-orange-900/20 to-card border-orange-500/30;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .text-currency {
+    @apply font-mono font-semibold tracking-wide;
+  }
+
+  /* Dashboard animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(20px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+
+  /* Rainbow animation keyframes */
+  @keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes rainbow-border {
+    0% { border-color: hsl(var(--rainbow-1)); }
+    14% { border-color: hsl(var(--rainbow-2)); }
+    28% { border-color: hsl(var(--rainbow-3)); }
+    42% { border-color: hsl(var(--rainbow-4)); }
+    57% { border-color: hsl(var(--rainbow-5)); }
+    71% { border-color: hsl(var(--rainbow-6)); }
+    85% { border-color: hsl(var(--rainbow-7)); }
+    100% { border-color: hsl(var(--rainbow-1)); }
+  }
+
+  /* Rainbow button effects */
+  .btn-rainbow {
+    position: relative;
+    background: linear-gradient(
+      45deg,
+      hsl(var(--rainbow-1)),
+      hsl(var(--rainbow-2)),
+      hsl(var(--rainbow-3)),
+      hsl(var(--rainbow-4)),
+      hsl(var(--rainbow-5)),
+      hsl(var(--rainbow-6)),
+      hsl(var(--rainbow-7)),
+      hsl(var(--rainbow-8)),
+      hsl(var(--rainbow-9)),
+      hsl(var(--rainbow-1))
+    );
+    background-size: 300% 300%;
+    animation: rainbow 3s ease infinite;
+    transition: all 0.3s ease;
+  }
+
+  .btn-rainbow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    animation-duration: 1s;
+  }
+
+  .btn-rainbow-border {
+    border: 2px solid;
+    background: transparent;
+    animation: rainbow-border 2s ease infinite;
+    transition: all 0.3s ease;
+  }
+
+  .btn-rainbow-border:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation-duration: 0.8s;
+  }
+
+  /* Colorful metric cards */
+  .metric-purple { @apply bg-gradient-to-br from-purple-500 to-purple-600 text-white; }
+  .metric-green { @apply bg-gradient-to-br from-green-500 to-green-600 text-white; }
+  .metric-pink { @apply bg-gradient-to-br from-pink-500 to-pink-600 text-white; }
+  .metric-red { @apply bg-gradient-to-br from-red-500 to-red-600 text-white; }
+  .metric-blue { @apply bg-gradient-to-br from-blue-500 to-blue-600 text-white; }
+  .metric-orange { @apply bg-gradient-to-br from-orange-500 to-orange-600 text-white; }
+  .metric-indigo { @apply bg-gradient-to-br from-indigo-500 to-indigo-600 text-white; }
+  .metric-teal { @apply bg-gradient-to-br from-teal-500 to-teal-600 text-white; }
+}
